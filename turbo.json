@@ -5,9 +5,6 @@
     "clean": {
       "cache": false
     },
-    "build": {
-      "outputs": ["dist/**", ".cache/*.tsbuildinfo"]
-    },
     "format": {
       "outputs": [".cache/.prettiercache"],
       "outputLogs": "new-only"

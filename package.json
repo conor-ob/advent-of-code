@@ -3,14 +3,11 @@
   "private": true,
   "scripts": {
     "clean": "turbo clean && rimraf node_modules",
-    "build": "turbo build",
     "format": "turbo format --continue -- --cache --cache-location .cache/.prettiercache",
     "lint": "turbo lint --continue -- --cache --cache-location .cache/.eslintcache",
     "typecheck": "turbo typecheck",
     "test": "turbo test",
-    "storybook": "turbo storybook",
-    "dev": "turbo dev --",
-    "start": "turbo start"
+    "dev": "turbo dev --"
   },
   "devDependencies": {
     "@pkg/prettier": "workspace:*",
@@ -21,7 +18,7 @@
     "vitest": "catalog:"
   },
   "prettier": "@pkg/prettier",
-  "packageManager": "pnpm@9.12.3",
+  "packageManager": "pnpm@9.14.4",
   "engines": {
     "node": ">=20"
   }
