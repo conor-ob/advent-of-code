@@ -1,6 +1,9 @@
 function part1(input: string) {
-  void input;
-  return "TODO";
+  const digits = input.split("").map(Number);
+  const sum = digits.reduce((acc, digit, index) => {
+    return acc + (digit === digits[(index + 1) % digits.length] ? digit : 0);
+  }, 0);
+  return sum;
 }
 
 function part2(input: string) {

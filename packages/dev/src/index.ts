@@ -14,7 +14,6 @@ async function main() {
   console.log(`Solving year ${year} day ${day}`);
 
   try {
-    const exampleInput = readFile(`../events/${year}/src/${day}/example.txt`);
     const input = readFile(`../events/${year}/src/${day}/input.txt`);
 
     const { part1, part2 } = (await import(
@@ -23,13 +22,11 @@ async function main() {
 
     console.log("Part 1");
     console.log("------");
-    console.log("example:", part1(exampleInput));
-    console.log("answer: ", part1(input));
+    console.log("answer:", part1(input));
 
     console.log("\nPart 2");
     console.log("------");
-    console.log("example:", part2(exampleInput));
-    console.log("answer: ", part2(input));
+    console.log("answer:", part2(input));
   } catch (error) {
     console.error(error);
   }

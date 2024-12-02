@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 export function part1(input: string) {
   const reports = input.split("\n").map((line) => line.split(" "));
 
@@ -15,9 +14,11 @@ export function part1(input: string) {
     return acc + 1;
   }, 0);
 
-  return safe;
+  void safe;
+  return "TODO";
 }
 
 export function part2(input: string) {
-  return "";
+  void input;
+  return "TODO";
 }

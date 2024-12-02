@@ -1,6 +1,14 @@
 function part1(input: string) {
-  void input;
-  return "TODO";
+  const instructions = input.split("");
+  const floor = instructions.reduce((acc, instruction) => {
+    if (instruction === "(") {
+      return acc + 1;
+    } else if (instruction === ")") {
+      return acc - 1;
+    }
+    return acc;
+  }, 0);
+  return floor;
 }
 
 function part2(input: string) {
