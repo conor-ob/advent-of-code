@@ -13,19 +13,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
-    name: 🔨 Build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup
-        uses: ./.github/actions/setup
-
-      - name: Run build
-        run: pnpm build
-
   format:
     name: 🖊️ Format
     runs-on: ubuntu-latest

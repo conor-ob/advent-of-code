@@ -12,8 +12,7 @@
   },
   "dependencies": {
     "@ianvs/prettier-plugin-sort-imports": "catalog:",
-    "prettier": "catalog:",
-    "prettier-plugin-tailwindcss": "catalog:"
+    "prettier": "catalog:"
   },
   "devDependencies": {
     "@total-typescript/tsconfig": "catalog:",

@@ -1,12 +1,9 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "ui": "tui",
+  "ui": "stream",
   "tasks": {
     "clean": {
       "cache": false
-    },
-    "build": {
-      "outputs": ["dist/**", ".cache/*.tsbuildinfo"]
     },
     "format": {
       "outputs": [".cache/.prettiercache"],

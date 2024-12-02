@@ -9,14 +9,10 @@
   "eslint.workingDirectories": [
     { "pattern": "apps/*/" },
     { "pattern": "packages/*/" },
+    { "pattern": "packages/events/*/" },
     { "pattern": "tooling/*/" }
   ],
   "prettier.ignorePath": ".gitignore",
-  "tailwindCSS.experimental.classRegex": [
-    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
-  ],
-  "tailwindCSS.experimental.configFile": "./apps/web/tailwind.config.ts",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.tsdk": "node_modules/typescript/lib"
 }
