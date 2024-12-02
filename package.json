@@ -9,7 +9,7 @@
     "typecheck": "turbo typecheck",
     "test": "turbo test",
     "storybook": "turbo storybook",
-    "dev": "turbo dev",
+    "dev": "turbo dev --",
     "start": "turbo start"
   },
   "devDependencies": {
