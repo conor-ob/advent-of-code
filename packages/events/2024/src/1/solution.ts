@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/prefer-for-of */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 function part1(input: string) {
   const lines = input.split("\n");
 

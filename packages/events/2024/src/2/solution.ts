@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 export function part1(input: string) {
   const reports = input.split("\n").map((line) => line.split(" "));
 
