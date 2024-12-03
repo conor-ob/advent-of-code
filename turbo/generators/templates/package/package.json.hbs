@@ -1,0 +1,25 @@
+{
+  "name": "@aoc/{{ year }}",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf dist && rimraf .cache && rimraf .turbo && rimraf node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit true",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@aoc/eslint": "workspace:*",
+    "@aoc/lib": "workspace:*",
+    "@aoc/prettier": "workspace:*",
+    "@total-typescript/tsconfig": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "rimraf": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  },
+  "prettier": "@aoc/prettier"
+}

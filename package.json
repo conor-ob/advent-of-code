@@ -2,6 +2,7 @@
   "name": "advent-of-code",
   "private": true,
   "scripts": {
+    "codegen": "turbo generate",
     "clean": "turbo clean && rimraf node_modules",
     "format": "turbo format --continue -- --cache --cache-location .cache/.prettiercache",
     "lint": "turbo lint --continue -- --cache --cache-location .cache/.eslintcache",
@@ -11,6 +12,7 @@
   },
   "devDependencies": {
     "@aoc/prettier": "workspace:*",
+    "@turbo/gen": "catalog:",
     "prettier": "catalog:",
     "rimraf": "catalog:",
     "turbo": "catalog:",
