@@ -372,6 +372,36 @@ importers:
         specifier: 'catalog:'
         version: 2.1.8(@types/node@22.10.1)
 
+  packages/events/2025:
+    devDependencies:
+      '@aoc/eslint':
+        specifier: workspace:*
+        version: link:../../../tooling/eslint
+      '@aoc/lib':
+        specifier: workspace:*
+        version: link:../../lib
+      '@aoc/prettier':
+        specifier: workspace:*
+        version: link:../../../tooling/prettier
+      '@total-typescript/tsconfig':
+        specifier: 'catalog:'
+        version: 1.0.4
+      eslint:
+        specifier: 'catalog:'
+        version: 9.16.0
+      prettier:
+        specifier: 'catalog:'
+        version: 3.4.1
+      rimraf:
+        specifier: 'catalog:'
+        version: 6.0.1
+      typescript:
+        specifier: 'catalog:'
+        version: 5.7.2
+      vitest:
+        specifier: 'catalog:'
+        version: 2.1.8(@types/node@22.10.1)
+
   packages/lib:
     devDependencies:
       '@aoc/eslint':
