@@ -1,5 +1,5 @@
 {
-  "name": "@pkg/eslint",
+  "name": "@aoc/eslint",
   "version": "0.0.0",
   "type": "module",
   "private": true,
@@ -17,11 +17,11 @@
     "typescript-eslint": "catalog:"
   },
   "devDependencies": {
-    "@pkg/prettier": "workspace:*",
+    "@aoc/prettier": "workspace:*",
     "@total-typescript/tsconfig": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:"
   },
-  "prettier": "@pkg/prettier"
+  "prettier": "@aoc/prettier"
 }

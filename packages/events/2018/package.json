@@ -1,5 +1,5 @@
 {
-  "name": "@pkg/2018",
+  "name": "@aoc/2018",
   "version": "0.0.0",
   "type": "module",
   "private": true,
@@ -11,9 +11,9 @@
     "test": "vitest"
   },
   "devDependencies": {
-    "@pkg/eslint": "workspace:*",
-    "@pkg/prettier": "workspace:*",
-    "@pkg/utils": "workspace:*",
+    "@aoc/eslint": "workspace:*",
+    "@aoc/lib": "workspace:*",
+    "@aoc/prettier": "workspace:*",
     "@total-typescript/tsconfig": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",
@@ -21,5 +21,5 @@
     "typescript": "catalog:",
     "vitest": "catalog:"
   },
-  "prettier": "@pkg/prettier"
+  "prettier": "@aoc/prettier"
 }

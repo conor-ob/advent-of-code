@@ -1,5 +1,5 @@
 {
-  "name": "turbostack",
+  "name": "advent-of-code",
   "private": true,
   "scripts": {
     "clean": "turbo clean && rimraf node_modules",
@@ -10,14 +10,14 @@
     "dev": "turbo dev --"
   },
   "devDependencies": {
-    "@pkg/prettier": "workspace:*",
+    "@aoc/prettier": "workspace:*",
     "prettier": "catalog:",
     "rimraf": "catalog:",
     "turbo": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"
   },
-  "prettier": "@pkg/prettier",
+  "prettier": "@aoc/prettier",
   "packageManager": "pnpm@9.14.4",
   "engines": {
     "node": ">=20"

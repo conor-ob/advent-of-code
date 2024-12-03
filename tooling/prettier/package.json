@@ -1,5 +1,5 @@
 {
-  "name": "@pkg/prettier",
+  "name": "@aoc/prettier",
   "version": "0.0.0",
   "type": "module",
   "private": true,
@@ -18,5 +18,5 @@
     "@total-typescript/tsconfig": "catalog:",
     "typescript": "catalog:"
   },
-  "prettier": "@pkg/prettier"
+  "prettier": "@aoc/prettier"
 }

@@ -1,5 +1,5 @@
-import type { Puzzle } from "@pkg/utils";
-import { readFile } from "@pkg/utils";
+import type { Puzzle } from "./types";
+import { readFile } from "./utils";
 
 async function main() {
   const args = process.argv.slice(2);
@@ -11,7 +11,7 @@ async function main() {
     process.exit(1);
   }
 
-  console.log(`Solving year ${year} day ${day}`);
+  console.log(`\nSolving year ${year} day ${day}\n`);
 
   try {
     const input = readFile(`../events/${year}/src/${day}/input.txt`);
