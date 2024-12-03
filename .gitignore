@@ -29,17 +29,7 @@ yarn-error.log*
 .DS_Store
 *.pem
 
-# vite
-vite.config.ts.timestamp-*
-
 # tsconfig
 .cache
 tsconfig.tsbuildinfo
 tsconfig.*.tsbuildinfo
-
-# storybook
-*storybook.log
-/storybook-static
-
-# pwa
-dev-dist/
