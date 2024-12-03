@@ -1,21 +1,17 @@
-/* eslint-disable @typescript-eslint/prefer-for-of */
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 function part1(input: string) {
-  const lines = input.split("\n");
+  const lines = input.split("\n").reduce(
+    (acc, line) => {
+      const parts = line.split("   ").map((part) => parseInt(part, 10));
+      return {
+        left: acc.left.concat(parts[0] ?? 0),
+        right: acc.right.concat(parts[1] ?? 0),
+      };
+    },
+    { left: new Array<number>(), right: new Array<number>() },
+  );
 
-  const left: string[] = [];
-  const right: string[] = [];
-
-  const inputLines = lines.forEach((line) => {
-    const parts = line.split("   ");
-    left.push(parts[0]!);
-    right.push(parts[1]!);
-  });
-
-  left.sort();
-  right.sort();
+  const left = lines.left.sort((a, b) => a - b);
+  const right = lines.right.sort((a, b) => a - b);
 
   let distance = 0;
   for (let i = 0; i < left.length; i++) {
@@ -26,34 +22,35 @@ function part1(input: string) {
 }
 
 function part2(input: string) {
-  const lines = input.split("\n");
+  const lines = input.split("\n").reduce(
+    (acc, line) => {
+      const parts = line.split("   ").map((part) => parseInt(part, 10));
+      return {
+        left: acc.left.concat(parts[0] ?? 0),
+        right: acc.right.concat(parts[1] ?? 0),
+      };
+    },
+    { left: new Array<number>(), right: new Array<number>() },
+  );
 
-  const left: string[] = [];
-  const right: string[] = [];
-
-  const inputLines = lines.forEach((line) => {
-    const parts = line.split("   ");
-    left.push(parts[0]!);
-    right.push(parts[1]!);
-  });
-
-  left.sort();
-  right.sort();
+  const left = lines.left.sort((a, b) => a - b);
+  const right = lines.right.sort((a, b) => a - b);
 
   const rightMap = right.reduce((acc, curr) => {
     if (acc.get(curr) === undefined) {
       acc.set(curr, 1);
     } else {
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       acc.set(curr, acc.get(curr)! + 1);
     }
     return acc;
-  }, new Map<string, number>());
+  }, new Map<number, number>());
 
   let similarity = 0;
-  for (let i = 0; i < left.length; i++) {
-    const frequency = rightMap.get(left[i]!);
+  for (const value of left) {
+    const frequency = rightMap.get(value);
     if (frequency !== undefined) {
-      similarity += Number(left[i]!) * frequency;
+      similarity += Number(value) * frequency;
     }
   }
 
