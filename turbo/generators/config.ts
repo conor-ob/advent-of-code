@@ -1,7 +1,7 @@
 import { PlopTypes } from "@turbo/gen";
 
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
-  plop.setGenerator("New day", {
+  plop.setGenerator("day", {
     description: "create a new daily puzzle",
     prompts: [
       {
@@ -38,23 +38,15 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
     ],
     actions: [
       {
-        type: "add",
-        path: "{{ turbo.paths.root }}/packages/events/{{ year }}/src/{{ day }}/input.txt",
-        templateFile: "templates/input.txt.hbs",
-      },
-      {
-        type: "add",
-        path: "{{ turbo.paths.root }}/packages/events/{{ year }}/src/{{ day }}/solution.test.ts",
-        templateFile: "templates/solution.test.ts.hbs",
-      },
-      {
-        type: "add",
-        path: "{{ turbo.paths.root }}/packages/events/{{ year }}/src/{{ day }}/solution.ts",
-        templateFile: "templates/solution.ts.hbs",
+        type: "addMany",
+        destination:
+          "{{ turbo.paths.root }}/packages/events/{{ year }}/src/{{ day }}",
+        templateFiles: "templates/puzzle/**",
+        base: "templates/puzzle",
       },
     ],
   });
-  plop.setGenerator("New year", {
+  plop.setGenerator("year", {
     description: "create a new advent of code project",
     prompts: [
       {
@@ -65,48 +57,30 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
           if (!input) {
             return "year is required";
           }
-          if (
-            parseInt(input) < 2015 ||
-            parseInt(input) > new Date().getFullYear()
-          ) {
-            return "please enter a valid year";
-          }
+          // if (
+          //   parseInt(input) < 2015 ||
+          //   parseInt(input) > new Date().getFullYear()
+          // ) {
+          //   return "please enter a valid year";
+          // }
           return true;
         },
       },
     ],
     actions: [
       {
-        type: "add",
-        path: "{{ turbo.paths.root }}/packages/events/{{ year }}/eslint.config.js",
-        templateFile: "templates/eslint.config.js.hbs",
+        type: "addMany",
+        destination: "{{ turbo.paths.root }}/packages/events/{{ year }}",
+        templateFiles: "templates/package/**",
+        base: "templates/package",
       },
       {
-        type: "add",
-        path: "{{ turbo.paths.root }}/packages/events/{{ year }}/package.json",
-        templateFile: "templates/package.json.hbs",
-      },
-      {
-        type: "add",
-        path: "{{ turbo.paths.root }}/packages/events/{{ year }}/tsconfig.json",
-        templateFile: "templates/tsconfig.json.hbs",
-      },
-      {
-        type: "add",
-        path: "{{ turbo.paths.root }}/packages/events/{{ year }}/src/1/input.txt",
-        templateFile: "templates/input.txt.hbs",
-      },
-      {
-        type: "add",
+        type: "addMany",
         data: { day: 1 },
-        path: "{{ turbo.paths.root }}/packages/events/{{ year }}/src/1/solution.test.ts",
-        templateFile: "templates/solution.test.ts.hbs",
-      },
-      {
-        type: "add",
-        data: { day: 1 },
-        path: "{{ turbo.paths.root }}/packages/events/{{ year }}/src/1/solution.ts",
-        templateFile: "templates/solution.ts.hbs",
+        destination:
+          "{{ turbo.paths.root }}/packages/events/{{ year }}/src/{{ day }}",
+        templateFiles: "templates/puzzle/**",
+        base: "templates/puzzle",
       },
     ],
   });
