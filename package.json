@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "codegen": "turbo generate",
-    "clean": "turbo clean && rimraf node_modules",
+    "clean": "turbo clean && git clean -xdf node_modules",
     "format": "turbo format --continue -- --cache --cache-location .cache/.prettiercache",
     "lint": "turbo lint --continue -- --cache --cache-location .cache/.eslintcache",
     "typecheck": "turbo typecheck",
@@ -14,7 +14,6 @@
     "@aoc/prettier": "workspace:*",
     "@turbo/gen": "catalog:",
     "prettier": "catalog:",
-    "rimraf": "catalog:",
     "turbo": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"

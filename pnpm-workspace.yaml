@@ -14,7 +14,6 @@ catalog:
   eslint-plugin-import: ^2.31.0 # https://www.npmjs.com/package/eslint-plugin-import?activeTab=versions
   eslint-plugin-turbo: ^2.3.3 # https://www.npmjs.com/package/eslint-plugin-turbo?activeTab=versions
   prettier: ^3.4.1 # https://www.npmjs.com/package/prettier?activeTab=versions
-  rimraf: ^6.0.1 # https://www.npmjs.com/package/rimraf?activeTab=versions
   turbo: ^2.3.3 # https://www.npmjs.com/package/turbo?activeTab=versions
   tsx: ^4.19.2 # https://www.npmjs.com/package/tsx?activeTab=versions
   typescript: ^5.7.2 # https://www.npmjs.com/package/typescript?activeTab=versions
