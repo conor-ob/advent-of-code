@@ -1,5 +1,5 @@
 {
-  "name": "@aoc/2024",
+  "name": "@aoc/2025",
   "version": "0.0.0",
   "type": "module",
   "private": true,
@@ -9,9 +9,6 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit true",
     "test": "vitest"
-  },
-  "dependencies": {
-    "@aoc/lib": "workspace:*"
   },
   "devDependencies": {
     "@aoc/eslint": "workspace:*",
