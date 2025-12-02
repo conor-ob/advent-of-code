@@ -3,77 +3,55 @@
  */
 export function part1(input: string) {
   const idRanges = input.split(",");
-  const invalidIdsSum = idRanges.reduce((acc, idRange) => {
-    const [start, end] = idRange.split("-").map(Number);
-    if (start === undefined || end === undefined) {
-      throw new Error(`Invalid id range: ${idRange}`);
-    }
-    for (let i = start; i <= end; i++) {
-      const isInvalid = isInvalidIdPart1(i);
-      if (isInvalid) {
-        acc += i;
-      }
-    }
-    return acc;
-  }, 0);
-  return invalidIdsSum;
-}
-
-function isInvalidIdPart1(id: number) {
-  const stringId = id.toString();
-  const stringIdLength = stringId.length;
-  if (stringIdLength % 2 !== 0) {
-    return false
-  }
-
-  const firstHalf = stringId.slice(0, stringIdLength / 2);
-  const secondHalf = stringId.slice(stringIdLength / 2);
-  
-  if (firstHalf === secondHalf) {
-    return true;
-  }
-  return false;
+  return sumOfInvalidIds(idRanges, (_) => [2]);
 }
 
 export function part2(input: string) {
   const idRanges = input.split(",");
-  const invalidIdsSum = idRanges.reduce((acc, idRange) => {
-    const [start, end] = idRange.split("-").map(Number);
-    if (start === undefined || end === undefined) {
-      throw new Error(`Invalid id range: ${idRange}`);
-    }
-    for (let i = start; i <= end; i++) {
-      const isInvalid = isInvalidIdPart2(i);
-      if (isInvalid) {
-        acc += i;
-      }
-    }
-    return acc;
-  }, 0);
-  return invalidIdsSum;
+  return sumOfInvalidIds(idRanges, getAllFactors);
 }
 
-function isInvalidIdPart2(id: number) {
-  const stringId = id.toString();
-  const stringIdLength = stringId.length;
-  
-  const factors = getFactors(stringIdLength);
+function sumOfInvalidIds(idRanges: string[], getFactors: (id: number) => number[]) {
+  return idRanges.reduce((acc, idRange) => {
+    const [start, end] = idRange.split("-").map(Number);
 
-  for (const factor of factors) {
-    const partLength = stringIdLength / factor;
-    const parts: string[] = [];
-    for (let i = 0; i < factor; i++) {
-      const part = stringId.slice(i * partLength, (i + 1) * partLength);
-      parts.push(part);
+    if (start === undefined || end === undefined || start > end) {
+      throw new Error(`Invalid id range: ${idRange}`);
     }
-    if (parts.every((part) => part === parts[0])) {
+
+    for (let id = start; id <= end; id++) {
+      const isInvalid = isInvalidId(id, getFactors);
+      if (isInvalid) {
+        acc += id;
+      }
+    }
+
+    return acc;
+  }, 0);
+}
+
+function isInvalidId(id: number, getFactors: (id: number) => number[]) {
+  const stringId = id.toString();
+  const idLength = stringId.length;
+  
+  const factors = getFactors(idLength);
+  for (const factor of factors) {
+    const partLength = idLength / factor;
+    const parts = new Set<string>();
+
+    for (let i = 0; i < idLength; i+=partLength) {
+      const part = stringId.slice(i, i + partLength);
+      parts.add(part);
+    }
+    
+    if (parts.size === 1) {
       return true;
     }
   }
   return false;
 }
 
-function getFactors(id: number) {
+function getAllFactors(id: number) {
   const factors = [];
   for (let i = 2; i <= id; i++) {
     if (id % i === 0) {
