@@ -11,7 +11,10 @@ export function part2(input: string) {
   return sumOfInvalidIds(idRanges, getAllFactors);
 }
 
-function sumOfInvalidIds(idRanges: string[], getFactors: (id: number) => number[]) {
+function sumOfInvalidIds(
+  idRanges: string[],
+  getFactors: (id: number) => number[],
+) {
   return idRanges.reduce((acc, idRange) => {
     const [start, end] = idRange.split("-").map(Number);
 
@@ -33,17 +36,17 @@ function sumOfInvalidIds(idRanges: string[], getFactors: (id: number) => number[
 function isInvalidId(id: number, getFactors: (id: number) => number[]) {
   const stringId = id.toString();
   const idLength = stringId.length;
-  
+
   const factors = getFactors(idLength);
   for (const factor of factors) {
     const partLength = idLength / factor;
     const parts = new Set<string>();
 
-    for (let i = 0; i < idLength; i+=partLength) {
+    for (let i = 0; i < idLength; i += partLength) {
       const part = stringId.slice(i, i + partLength);
       parts.add(part);
     }
-    
+
     if (parts.size === 1) {
       return true;
     }
