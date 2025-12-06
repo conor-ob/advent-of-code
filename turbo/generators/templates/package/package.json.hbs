@@ -5,20 +5,16 @@
   "private": true,
   "scripts": {
     "clean": "git clean -xdf .cache .turbo node_modules",
-    "format": "prettier --check . --ignore-path ../../.gitignore",
-    "lint": "eslint",
     "typecheck": "tsc --noEmit true",
     "test": "vitest"
   },
+  "dependencies": {
+    "@aoc/lib": "workspace:*"
+  },
   "devDependencies": {
-    "@aoc/eslint": "workspace:*",
     "@aoc/lib": "workspace:*",
-    "@aoc/prettier": "workspace:*",
     "@total-typescript/tsconfig": "catalog:",
-    "eslint": "catalog:",
-    "prettier": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"
-  },
-  "prettier": "@aoc/prettier"
+  }
 }

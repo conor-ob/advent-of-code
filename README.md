@@ -14,8 +14,7 @@ pnpm codegen
 ? Select generator to run   year: create a new advent of code project
 ? What is the year of the new project? 2024
 >>> Changes made:
-  • 3 files added
- -> /packages/events/2024/eslint.config.js
+  • 2 files added
  -> /packages/events/2024/package.json
  -> /packages/events/2024/tsconfig.json (addMany)
   • 3 files added
