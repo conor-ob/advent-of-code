@@ -15,7 +15,6 @@ function part1(input: string) {
       }
     },
     {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       lastDepth: lines[0]!,
       increases: 0,
     },

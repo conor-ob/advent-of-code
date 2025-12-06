@@ -40,7 +40,6 @@ function part2(input: string) {
     if (acc.get(curr) === undefined) {
       acc.set(curr, 1);
     } else {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       acc.set(curr, acc.get(curr)! + 1);
     }
     return acc;

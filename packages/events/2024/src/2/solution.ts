@@ -5,9 +5,7 @@ export function part1(input: string) {
     const report = line.split(" ").map(Number);
     let state = "";
     for (let i = 0; i < report.length; i++) {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       const current = report[i]!;
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       const next = report[i + 1]!;
 
       if (current === next) {
@@ -44,9 +42,7 @@ export function part2(input: string) {
   function isSafe(report: number[]) {
     let state = "";
     for (let i = 0; i < report.length; i++) {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       const current = report[i]!;
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       const next = report[i + 1]!;
 
       if (current === next) {

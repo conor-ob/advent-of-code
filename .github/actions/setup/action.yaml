@@ -1,4 +1,5 @@
 name: 🌱 Setup
+description: Setup the project CI environment
 
 runs:
   using: "composite"
