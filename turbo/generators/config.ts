@@ -1,4 +1,4 @@
-import { PlopTypes } from "@turbo/gen";
+import type { PlopTypes } from "@turbo/gen";
 
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
   plop.setGenerator("day", {
@@ -13,8 +13,8 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
             return "year is required";
           }
           if (
-            parseInt(input) < 2015 ||
-            parseInt(input) > new Date().getFullYear()
+            parseInt(input, 10) < 2015 ||
+            parseInt(input, 10) > new Date().getFullYear()
           ) {
             return "please enter a valid year";
           }
@@ -29,7 +29,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
           if (!input) {
             return "day is required";
           }
-          if (parseInt(input) < 1 || parseInt(input) > 25) {
+          if (parseInt(input, 10) < 1 || parseInt(input, 10) > 25) {
             return "please enter a day between 1 and 25";
           }
           return true;
