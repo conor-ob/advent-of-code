@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/style/noNonNullAssertion: todo */
 function part1(input: string) {
   const lines = input.split("\n").reduce(
     (acc, line) => {
@@ -7,7 +8,7 @@ function part1(input: string) {
         right: acc.right.concat(parts[1] ?? 0),
       };
     },
-    { left: new Array<number>(), right: new Array<number>() },
+    { left: [] as number[], right: [] as number[] },
   );
 
   const left = lines.left.sort((a, b) => a - b);
@@ -30,7 +31,7 @@ function part2(input: string) {
         right: acc.right.concat(parts[1] ?? 0),
       };
     },
-    { left: new Array<number>(), right: new Array<number>() },
+    { left: [] as number[], right: [] as number[] },
   );
 
   const left = lines.left.sort((a, b) => a - b);

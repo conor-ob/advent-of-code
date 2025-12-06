@@ -1,6 +1,5 @@
-import { describe, expect, test } from "vitest";
-
 import { readFile } from "@aoc/lib/utils";
+import { describe, expect, test } from "vitest";
 
 import { part1, part2 } from "./solution";
 

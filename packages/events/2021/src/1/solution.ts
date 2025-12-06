@@ -1,3 +1,5 @@
+/** biome-ignore-all lint/performance/noAccumulatingSpread: todo */
+/** biome-ignore-all lint/style/noNonNullAssertion: todo */
 function part1(input: string) {
   const lines = input.split("\n").map((line) => parseInt(line, 10));
   const aggregated = lines.reduce(

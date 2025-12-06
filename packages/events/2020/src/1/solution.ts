@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/style/noNonNullAssertion: todo */
 function part1(input: string) {
   const lines = input.split("\n");
   for (let i = 0; i < lines.length; i++) {

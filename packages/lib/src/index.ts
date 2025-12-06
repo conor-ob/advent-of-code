@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noConsole: debug logging */
 import type { Puzzle } from "./types";
 import { readFile } from "./utils";
 
