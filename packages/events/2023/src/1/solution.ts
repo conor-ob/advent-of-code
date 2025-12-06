@@ -3,10 +3,8 @@ function part1(input: string) {
   const sum = lines.reduce((acc, line) => {
     let firstDigit = 0;
     for (const char of line) {
-      if (isNaN(parseInt(char))) {
-        continue;
-      } else {
-        firstDigit = parseInt(char);
+      if (!Number.isNaN(parseInt(char, 10))) {
+        firstDigit = parseInt(char, 10);
         break;
       }
     }
@@ -16,10 +14,8 @@ function part1(input: string) {
       if (!char) {
         throw new Error("No last digit found");
       }
-      if (isNaN(parseInt(char))) {
-        continue;
-      } else {
-        lastDigit = parseInt(char);
+      if (!Number.isNaN(parseInt(char, 10))) {
+        lastDigit = parseInt(char, 10);
         break;
       }
     }

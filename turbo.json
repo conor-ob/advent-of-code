@@ -5,15 +5,11 @@
     "clean": {
       "cache": false
     },
-    "format": {
-      "outputs": [".cache/.prettiercache"],
-      "outputLogs": "new-only"
-    },
-    "lint": {
-      "outputs": [".cache/.eslintcache"]
+    "codegen": {
+      "cache": false
     },
     "typecheck": {
-      "outputs": [".cache/*.tsbuildinfo"]
+      "cache": false
     },
     "test": {
       "outputs": ["coverage/**"]

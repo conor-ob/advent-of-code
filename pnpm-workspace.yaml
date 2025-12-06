@@ -1,21 +1,9 @@
 packages:
-  - "apps/*"
-  - "packages/*"
   - "packages/events/*"
-  - "tooling/*"
+  - "packages/lib"
 
 catalog:
-  "@eslint/compat": ^1.2.3 # https://www.npmjs.com/package/@eslint/compat?activeTab=versions
-  "@ianvs/prettier-plugin-sort-imports": ^4.4.0 # https://www.npmjs.com/package/@ianvs/prettier-plugin-sort-imports?activeTab=versions
-  "@total-typescript/tsconfig": ^1.0.4 # https://www.npmjs.com/package/@total-typescript/tsconfig?activeTab=versions
-  "@turbo/gen": ^2.3.3 # https://www.npmjs.com/package/@turbo/gen?activeTab=versions
-  "@types/node": ^22.10.1 # https://www.npmjs.com/package/@types/node?activeTab=versions
-  eslint: ^9.16.0 # https://www.npmjs.com/package/eslint?activeTab=versions
-  eslint-plugin-import: ^2.31.0 # https://www.npmjs.com/package/eslint-plugin-import?activeTab=versions
-  eslint-plugin-turbo: ^2.3.3 # https://www.npmjs.com/package/eslint-plugin-turbo?activeTab=versions
-  prettier: ^3.4.1 # https://www.npmjs.com/package/prettier?activeTab=versions
-  turbo: ^2.3.3 # https://www.npmjs.com/package/turbo?activeTab=versions
-  tsx: ^4.19.2 # https://www.npmjs.com/package/tsx?activeTab=versions
-  typescript: ^5.7.2 # https://www.npmjs.com/package/typescript?activeTab=versions
-  typescript-eslint: ^8.17.0 # https://www.npmjs.com/package/typescript-eslint?activeTab=versions
-  vitest: ^2.1.8 # https://www.npmjs.com/package/vitest?activeTab=versions
+  "@total-typescript/tsconfig": ^1.0.4
+  "@types/node": ^22.10.1
+  typescript: ^5.7.2
+  vitest: ^2.1.8

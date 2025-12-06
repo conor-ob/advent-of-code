@@ -1,3 +1,5 @@
+/** biome-ignore-all lint/performance/noAccumulatingSpread: todo */
+/** biome-ignore-all lint/style/noNonNullAssertion: todo */
 function part1(input: string) {
   const lines = input.split("\n").map((line) => parseInt(line, 10));
   const aggregated = lines.reduce(
@@ -15,7 +17,6 @@ function part1(input: string) {
       }
     },
     {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       lastDepth: lines[0]!,
       increases: 0,
     },

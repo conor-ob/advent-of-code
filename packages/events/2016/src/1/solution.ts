@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/performance/noAccumulatingSpread: todo */
 function part1(input: string) {
   const directions = input.split(", ");
   const hq = directions.reduce(

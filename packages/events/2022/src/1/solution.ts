@@ -7,7 +7,7 @@ function part1(input: string) {
       maxCalories = Math.max(maxCalories, currentCalories);
       currentCalories = 0;
     } else {
-      const calories = parseInt(line);
+      const calories = parseInt(line, 10);
       currentCalories += calories;
     }
   }
