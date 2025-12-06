@@ -12,7 +12,6 @@
     "@aoc/lib": "workspace:*"
   },
   "devDependencies": {
-    "@aoc/lib": "workspace:*",
     "@total-typescript/tsconfig": "catalog:",
     "@types/node": "catalog:",
     "typescript": "catalog:",
