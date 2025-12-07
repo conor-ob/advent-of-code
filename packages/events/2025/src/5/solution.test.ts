@@ -9,6 +9,6 @@ describe("day 5", () => {
   });
 
   test("part 2", () => {
-    expect(part2(readFile("./src/5/input.txt"))).toBe("TODO");
+    expect(part2(readFile("./src/5/input.txt"))).toBe(345755049374932);
   });
 });
