@@ -3,26 +3,29 @@
  */
 export function part1(input: string) {
   const lines = input.split("\n");
-  const tachyonBeamPositions = new Set([lines[0]?.indexOf("S") ?? 0]);
-  let numSplits = 0;
-  for (let i = 1; i < lines.length; i++) {
+
+  const beamPositions = new Set([lines[0]?.indexOf("S") ?? 0]);
+
+  return lines.reduce((acc, line) => {
     const splitterPositions = [];
-    for (let j = 0; j < lines[i]!.length; j++) {
-      if (lines[i]![j] === "^") {
+
+    for (let j = 0; j < line.length; j++) {
+      if (line[j] === "^") {
         splitterPositions.push(j);
       }
     }
+
     for (const splitterPosition of splitterPositions) {
-      if (tachyonBeamPositions.has(splitterPosition)) {
-        numSplits++;
-        tachyonBeamPositions.delete(splitterPosition);
-        tachyonBeamPositions.add(splitterPosition - 1);
-        tachyonBeamPositions.add(splitterPosition + 1);
+      if (beamPositions.has(splitterPosition)) {
+        beamPositions.delete(splitterPosition);
+        beamPositions.add(splitterPosition - 1);
+        beamPositions.add(splitterPosition + 1);
+        acc++;
       }
     }
-    console.log(tachyonBeamPositions);
-  }
-  return numSplits;
+
+    return acc;
+  }, 0);
 }
 
 export function part2(input: string) {
