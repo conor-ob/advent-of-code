@@ -23,13 +23,8 @@ jobs:
       - name: Setup
         uses: ./.github/actions/setup
 
-      - name: Setup Biome
-        uses: biomejs/setup-biome@v2
-        with:
-          version: latest
-
       - name: Run check
-        run: biome ci .
+        run: pnpm biome ci .
 
   typecheck:
     name: 🧬 Typecheck
