@@ -24,7 +24,7 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Run check
-        run: pnpm check:ci
+        run: pnpm biome ci .
 
   typecheck:
     name: 🧬 Typecheck
