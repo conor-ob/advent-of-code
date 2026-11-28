@@ -2,7 +2,7 @@
   "name": "advent-of-code",
   "private": true,
   "engines": {
-    "node": ">=24"
+    "node": ">=26"
   },
   "packageManager": "pnpm@12.22.0",
   "scripts": {
