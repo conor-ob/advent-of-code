@@ -2,6 +2,9 @@ packages:
   - "packages/events/*"
   - "packages/lib"
 
+# pnpm 9 ignores this; .npmrc holds the active setting until pnpm 10
+strictPeerDependencies: true
+
 catalog:
   "@total-typescript/tsconfig": ^1.0.4
   "@types/node": ^24.19.2
