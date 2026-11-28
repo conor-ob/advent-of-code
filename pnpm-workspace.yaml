@@ -10,5 +10,5 @@ allowBuilds:
 catalog:
   "@total-typescript/tsconfig": ^1.0.4
   "@types/node": ^26.6.6
-  typescript: ^5.9.3
+  typescript: ^7.0.2
   vitest: ^4.0.0
